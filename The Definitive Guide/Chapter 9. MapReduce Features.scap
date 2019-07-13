@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="7D06B944-67F3-41CE-8577-D3758C99275D">
+    <Notes>
+        <Note ID="0" FontSize="28.0" Position="382.27301,151.222656" Width="131.0">
+            <Appearance></Appearance>
+            <String>Counters</String>
+            <ConnectedNoteIDs>1, 7</ConnectedNoteIDs>
+            <PointsToNoteIDs>1, 7</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,8</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="175.718307,93.785156" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Counters are a useful channel for gather statistics about the job</String>
+            <ConnectedNoteIDs>0, 2-4</ConnectedNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="175.065964,22.324219" Width="94.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Quality Conctrol</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="302.144104,24.628906" Width="145.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Application-level statistics</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="430.230042,62.890625" Width="107.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Problem diagnosis</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="168.272995,279.050781" Width="129.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Report various metrics</String>
+            <ConnectedNoteIDs>6-7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="160.034714,341.179688" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>There are counters for the number of bytes and records processed, which allow you to confirm that the expected amount of input was consumed and the expected amount of output was produced</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="213.116745,224.0" Width="129.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Built-in counter groups</String>
+            <ConnectedNoteIDs>0, 5, 8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="340.261292,266.742188" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Each group either contains task counters or job counters</String>
+            <ConnectedNoteIDs>7, 10, 15, 19, 22</ConnectedNoteIDs>
+            <PointsToNoteIDs>10, 15, 19, 22</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="497.409729,224.558594" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Task Counters</String>
+            <ConnectedNoteIDs>8, 11, 13-14</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="595.870667,125.917969" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Task counters gather information about tasks over the course of their execution, and the results are aggregated over all the tasks in a job</String>
+            <ConnectedNoteIDs>10, 12</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="611.269104,50.621094" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Counts the input records read by each map task and aggregates over all map tasks</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="631.515198,215.304688" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Task counters are sent in full every time</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="643.761292,274.089844" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Counters values are definitive only once a job has successfully completed</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="468.425354,339.769531" Width="80.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Job Counters</String>
+            <ConnectedNoteIDs>8, 16-17</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="739.612488,425.346771" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Job Counters are maintained by the application master, so they don’t need to be sent across the network</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="605.999573,353.605469" Width="153.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Measure job-level statistics</String>
+            <ConnectedNoteIDs>15, 18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="768.06665,347.431122" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Counts the number of map tasks that were launched over the course of a job</String>
+            <ConnectedNoteIDs>17</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="394.041473,407.879608" Width="160.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>User-Defined Java Counters</String>
+            <ConnectedNoteIDs>8, 20-21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="425.222931,495.645966" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Dynamic counters</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="519.985352,454.708984" Width="112.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Retrieving counters</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="261.998138,449.518463" Width="189.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>User-Defined Streaming Counters</String>
+            <ConnectedNoteIDs>8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="28.0" Position="307.762573,640.645813" Width="106.0">
+            <Appearance></Appearance>
+            <String>Sorting</String>
+            <ConnectedNoteIDs>24</ConnectedNoteIDs>
+            <PointsToNoteIDs>24</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,7</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="325.106323,737.916687" Width="71.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Preparation</String>
+            <ConnectedNoteIDs>23, 25</ConnectedNoteIDs>
+            <PointsToNoteIDs>25</PointsToNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="326.615326,782.758484" Width="68.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Partial Sort</String>
+            <ConnectedNoteIDs>24, 26-27</ConnectedNoteIDs>
+            <PointsToNoteIDs>27</PointsToNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="445.11676,784.0" Width="174.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sort input records by their keys</String>
+            <ConnectedNoteIDs>25</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="330.327148,831.8302" Width="59.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Total Sort</String>
+            <ConnectedNoteIDs>25, 28, 32</ConnectedNoteIDs>
+            <PointsToNoteIDs>32</PointsToNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="433.922089,821.815247" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It is possible to produce a set of sorted files that would form a globally sorted file</String>
+            <ConnectedNoteIDs>27, 29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="487.888641,888.866516" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Use a partitioner</String>
+            <ConnectedNoteIDs>28, 30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="443.041809,927.71521" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Try to construct even set of partitions</String>
+            <ConnectedNoteIDs>29, 31</ConnectedNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="464.869507,985.089111" Width="151.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>By sampling the key space</String>
+            <ConnectedNoteIDs>30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="315.575256,886.0" Width="91.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Secondary Sort</String>
+            <ConnectedNoteIDs>27, 33-34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="99.193329,878.701721" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sorts the records by key before reach the reducers</String>
+            <ConnectedNoteIDs>32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="34" FontSize="12.0" Position="89.533562,944.743408" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Keys to get the effect of sorting by value</String>
+            <ConnectedNoteIDs>32, 35-37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="7.896127,1016.259705" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Make the key a composite of the natural key and the natural value</String>
+            <ConnectedNoteIDs>34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="326.104431,1036.93811" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The sort comparator should order by the composite key</String>
+            <ConnectedNoteIDs>34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="144.254623,1081.638916" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The partitioner and grouping comparator for the composite key should consider only the natural key for partitioning and grouping</String>
+            <ConnectedNoteIDs>34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="28.0" Position="1454.180054,254.256577" Width="66.0">
+            <Appearance></Appearance>
+            <String>Join</String>
+            <ConnectedNoteIDs>40, 43, 45</ConnectedNoteIDs>
+            <PointsToNoteIDs>43, 45</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,4</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="1157.728394,154.620682" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Consider using a higher-level framework which join operations are a core part of the implmentation</String>
+            <ConnectedNoteIDs>39, 42</ConnectedNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="1162.768921,87.668381" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Pig, Hive, Cascading, Cruc or Spark</String>
+            <ConnectedNoteIDs>40</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="1241.109619,312.506592" Width="91.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map-Side Joins</String>
+            <ConnectedNoteIDs>39, 44, 47, 52</ConnectedNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="1119.628906,265.365326" Width="189.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The join performed by the mapper</String>
+            <ConnectedNoteIDs>43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="1582.182373,321.234985" Width="98.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reduce-side join</String>
+            <ConnectedNoteIDs>39, 46, 53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="1639.639771,255.790085" Width="176.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The join perform by the reducer</String>
+            <ConnectedNoteIDs>45</ConnectedNoteIDs>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="1061.233398,365.614716" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Perform the join before the data reaches the map function</String>
+            <ConnectedNoteIDs>43, 49</ConnectedNoteIDs>
+        </Note>
+        <Note ID="49" FontSize="12.0" Position="1052.844971,453.21463" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Inputs to each map must be partitioned and sorted in a particular way</String>
+            <ConnectedNoteIDs>47, 50</ConnectedNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="1015.273865,533.867798" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Each input dataset must be divided into the same number of partitions, and it must be sorted by the same key in each source</String>
+            <ConnectedNoteIDs>49, 51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="994.902161,645.939758" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>All the records for a patricular key must reside in the same partition</String>
+            <ConnectedNoteIDs>50</ConnectedNoteIDs>
+        </Note>
+        <Note ID="52" FontSize="12.0" Position="1284.662476,378.715881" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Can be used to join the outputs of several jobs that had the same number of reducers, the same keys, and output files that are not splittable</String>
+            <ConnectedNoteIDs>43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="1613.305664,367.057159" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The input datasets don’t have to be structured in any particular way, but it is less efficient because both datasets have to go through the MapReduce shuffle.</String>
+            <ConnectedNoteIDs>45, 54</ConnectedNoteIDs>
+        </Note>
+        <Note ID="54" FontSize="12.0" Position="1620.306152,502.742798" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Mapper tags each record with its source and uses the join key as the map output key, so that the records with the same key are brought together in the reducer</String>
+            <ConnectedNoteIDs>53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="55" FontSize="28.0" Position="1223.72644,1101.726074" Width="301.0">
+            <Appearance></Appearance>
+            <String>Side Data Distribution</String>
+            <ConnectedNoteIDs>56, 58, 61</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,22</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="56" FontSize="12.0" Position="1065.0,975.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Extra read-only data needed by a job to process the main dataset</String>
+            <ConnectedNoteIDs>55, 57</ConnectedNoteIDs>
+        </Note>
+        <Note ID="57" FontSize="12.0" Position="1067.868164,869.520691" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The challenge is to make side data available to all the map or reduce tasks in a convenient and efficient fashion</String>
+            <ConnectedNoteIDs>56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="1038.788818,1175.405884" Width="157.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Using the Job Configuration</String>
+            <ConnectedNoteIDs>55, 59-60</ConnectedNoteIDs>
+        </Note>
+        <Note ID="59" FontSize="12.0" Position="962.806763,1100.769531" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Set arbitrary key-value pairs using various setter methods</String>
+            <ConnectedNoteIDs>58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="60" FontSize="12.0" Position="970.112793,1225.990967" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Shouldn’t use this for transferring more than a few kilobytes of data, because it can put pressure on the memory usage in MapReduce components</String>
+            <ConnectedNoteIDs>58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="61" FontSize="12.0" Position="1347.635986,1188.769043" Width="104.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Distributed Cache</String>
+            <ConnectedNoteIDs>55, 62</ConnectedNoteIDs>
+        </Note>
+        <Note ID="62" FontSize="12.0" Position="1304.468384,1240.410522" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Distribute datasets using Hadoop’s distributed cache mechanism</String>
+            <ConnectedNoteIDs>61, 63</ConnectedNoteIDs>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="1219.457642,1309.750732" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Copy files and archives to the task nodes to the task nodes</String>
+            <ConnectedNoteIDs>62, 64</ConnectedNoteIDs>
+        </Note>
+        <Note ID="64" FontSize="12.0" Position="1145.790894,1368.872681" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Files are normally copied to any particular node once per job</String>
+            <ConnectedNoteIDs>63</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0, 2-5, 7, 10, 15, 17, 19-27, 29, 31-32, 39, 43-46, 55, 58, 61</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="E6164C11-BCDA-4BC1-A644-6207D242E0A0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="C7951489-1700-4C45-93EA-A1BA5E401833" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="AEE33EAF-29E6-4E87-AE46-502CDD4D43A7" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="9C67162E-465B-44D7-B18F-52B1ED300E6A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="41743939-32B1-4577-AA35-E260FE333524" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="32F0E70E-E785-4E15-A6FD-A00955DB51FD" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="CB68D840-622A-43B2-B645-2160E3F4FF8D" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

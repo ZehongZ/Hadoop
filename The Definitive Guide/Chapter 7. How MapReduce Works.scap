@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="6F410AEE-82FB-4FDA-A86F-0E7985EC2C93">
+    <Notes>
+        <Note ID="0" FontSize="28.0" Position="89.0,93.0" Width="352.0">
+            <Appearance></Appearance>
+            <String>Hadoop takes to run a job</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+            <PointsToNoteIDs>2</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,25</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="182.0,160.0" Width="126.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>5 independent entities</String>
+            <ConnectedNoteIDs>0, 3-7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="72.0,196.0" Width="39.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Client</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="140.304688,234.171875" Width="142.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>YARN resource manager</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="295.597656,237.742188" Width="128.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>YARN node managers</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="404.683594,195.871094" Width="174.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>MapReduce application master</String>
+            <ConnectedNoteIDs>2, 8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="397.652344,153.671875" Width="123.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Distributed filesystem</String>
+            <ConnectedNoteIDs>2, 9</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="456.96875,235.71875" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The application master and the MapReduce tasks run in containers that are scheduled by the resource manager and managed by the node managers</String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="653.234375,149.761719" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sharing job files between the other entities</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="28.0" Position="205.246094,448.433594" Width="225.0">
+            <Appearance></Appearance>
+            <String>Job Submission</String>
+            <ConnectedNoteIDs>11-15</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="30.140625,379.292969" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Ask the resource manager for a new application ID</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="9.789062,502.96875" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Checks the output specification of the job</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="227.078125,563.195312" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Computes the input splits for the job</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="501.640625,495.972656" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Copies the resources needed to run the job, including the job JAR file, the configuration file and the computed input splits, to the shared filesystem in a directory named after the job ID</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="482.175781,397.085938" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String> Submits the job on the resource manager</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="28.0" Position="227.515625,783.09375" Width="228.0">
+            <Appearance></Appearance>
+            <String>Job Initialization</String>
+            <ConnectedNoteIDs>17-19</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,18</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="41.510418,672.723938" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The application master for MapReduce job initializes the job by creating a number of bookkeeping objects to keep track of the job’s progress</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="311.34375,660.505188" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It will receive progress and completion reports from the tasks</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="528.515625,722.864563" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Create map task objects for each split, as well as a number of reduce task objects</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="28.0" Position="221.591385,909.962402" Width="248.0">
+            <Appearance></Appearance>
+            <String>Task Assignment</String>
+            <ConnectedNoteIDs>21</ConnectedNoteIDs>
+            <PointsToNoteIDs>21</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,15</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="243.428711,1023.731079" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>If the job does not qualify for running as an uber task</String>
+            <ConnectedNoteIDs>20, 22</ConnectedNoteIDs>
+            <PointsToNoteIDs>22</PointsToNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="238.951141,1109.696167" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The application master requests containers for all the map and reduce tasks in the job from the resource manager</String>
+            <ConnectedNoteIDs>21, 23-25</ConnectedNoteIDs>
+            <PointsToNoteIDs>25</PointsToNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="12.764716,1201.661011" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>All the map tasks must complete before the sort phase of the reduce can start</String>
+            <ConnectedNoteIDs>22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="456.739105,1207.734497" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reduce tasks are not made until 5% of map tasks have completed</String>
+            <ConnectedNoteIDs>22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="236.390991,1278.689453" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Request also specify memory requirements and CPUs for tasks</String>
+            <ConnectedNoteIDs>22, 26</ConnectedNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="478.003998,1323.860107" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>By default, each map and reduce task is allocated 1024 MB of memory and one virtual core</String>
+            <ConnectedNoteIDs>25</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="28.0" Position="943.596741,243.827957" Width="212.0">
+            <Appearance></Appearance>
+            <String>Task Execution</String>
+            <ConnectedNoteIDs>28</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="1011.016602,59.520279" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Once a task has been assigned resources for a container on a particular node by the resource manager’s scheduler, the application master starts the container by contacting the node manager</String>
+            <ConnectedNoteIDs>27</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="28.0" Position="914.306152,628.980591" Width="145.0">
+            <Appearance></Appearance>
+            <String>Streaming</String>
+            <ConnectedNoteIDs>30</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,9</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="881.401611,477.516968" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Streaming runs special map and reduce tasks for the purpose of launching the user-supplied executable and communicating with it</String>
+            <ConnectedNoteIDs>29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="28.0" Position="1376.621948,1260.72229" Width="116.0">
+            <Appearance></Appearance>
+            <String>Failures</String>
+            <ConnectedNoteIDs>33, 47, 53, 56</ConnectedNoteIDs>
+            <PointsToNoteIDs>33, 47, 53, 56</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,8</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="1592.621948,1293.72229" Width="73.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Task Failure</String>
+            <ConnectedNoteIDs>32, 34, 37, 39</ConnectedNoteIDs>
+            <PointsToNoteIDs>34, 37, 39</PointsToNoteIDs>
+        </Note>
+        <Note ID="34" FontSize="12.0" Position="1691.513428,1242.966797" Width="111.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Run time exception</String>
+            <ConnectedNoteIDs>33, 35-36, 42</ConnectedNoteIDs>
+            <PointsToNoteIDs>42</PointsToNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="1627.811646,1106.497681" Width="196.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Report to parent application master</String>
+            <ConnectedNoteIDs>34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="1846.75647,1061.138306" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Free up container os its resources are available</String>
+            <ConnectedNoteIDs>34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="1694.429688,1371.579712" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Streaming Tasks</String>
+            <ConnectedNoteIDs>33, 38, 42</ConnectedNoteIDs>
+            <PointsToNoteIDs>42</PointsToNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="1761.211426,1312.723755" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Streaming process exits with a nonzero exit code</String>
+            <ConnectedNoteIDs>37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="1605.236084,1423.174683" Width="158.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sudden exit of the task JVM</String>
+            <ConnectedNoteIDs>33, 40-42</ConnectedNoteIDs>
+            <PointsToNoteIDs>42</PointsToNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="1874.731689,1488.339233" Width="56.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>JVM bug</String>
+            <ConnectedNoteIDs>39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="1701.299194,1531.126099" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Node manager notices that the process has exited and informs the application master </String>
+            <ConnectedNoteIDs>39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="2104.192139,1374.04541" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Application master will reschedule the task on a different node</String>
+            <ConnectedNoteIDs>34, 37, 39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="2088.375977,1263.487549" Width="64.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>Task killed</String>
+            <ConnectedNoteIDs>44-46</ConnectedNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="2141.810791,1203.101562" Width="95.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Due to duplicate</String>
+            <ConnectedNoteIDs>43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="2210.816162,1263.875488" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>node manager was running on failed</String>
+            <ConnectedNoteIDs>43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="1978.713257,1208.880981" Width="72.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>User initiate</String>
+            <ConnectedNoteIDs>43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="1221.345337,1158.415894" Width="147.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Application Master Failure</String>
+            <ConnectedNoteIDs>32, 48-49</ConnectedNoteIDs>
+            <PointsToNoteIDs>48-49</PointsToNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="1044.372559,1051.961426" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Application in YARN are retired in the event of failure</String>
+            <ConnectedNoteIDs>47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="49" FontSize="12.0" Position="1295.820068,1039.669434" Width="59.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Recovery</String>
+            <ConnectedNoteIDs>47, 50</ConnectedNoteIDs>
+            <PointsToNoteIDs>50</PointsToNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="1297.071411,898.8078" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>An Application master sends periodic heartbeats to the resource manager</String>
+            <ConnectedNoteIDs>49, 51</ConnectedNoteIDs>
+            <PointsToNoteIDs>51</PointsToNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="1680.384888,899.237671" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The resource manager will detect the failure and start a new instance of the master running in a new container</String>
+            <ConnectedNoteIDs>50, 52</ConnectedNoteIDs>
+            <PointsToNoteIDs>52</PointsToNoteIDs>
+        </Note>
+        <Note ID="52" FontSize="12.0" Position="1430.260864,1017.729858" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The MapReduce application master will use the job history to recover the state of the tasks</String>
+            <ConnectedNoteIDs>51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="1068.735596,1258.717773" Width="128.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Node Manager Failure</String>
+            <ConnectedNoteIDs>32, 54-55</ConnectedNoteIDs>
+        </Note>
+        <Note ID="54" FontSize="12.0" Position="820.502197,1305.035522" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Stop sending heartbeats to the resource manager if it fails</String>
+            <ConnectedNoteIDs>53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="55" FontSize="12.0" Position="804.141846,1176.858398" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Could be blacklisted if the number of failures are high</String>
+            <ConnectedNoteIDs>53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="56" FontSize="12.0" Position="1237.876221,1366.780273" Width="151.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Resource Manager Failure</String>
+            <ConnectedNoteIDs>32, 57-58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="57" FontSize="12.0" Position="979.835449,1427.69751" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>If it fails, all running jobs fail and can’t be recovered</String>
+            <ConnectedNoteIDs>56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="1197.154785,1495.254395" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It is necessary to run a pair of resource managers in active-standby configuration. The standby can take over when active resource manager fails</String>
+            <ConnectedNoteIDs>56, 59</ConnectedNoteIDs>
+        </Note>
+        <Note ID="59" FontSize="12.0" Position="1110.58606,1615.284302" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Information about all the running applications is stored in a highly available state store, so that the standby can recover the core state of the failed active resource manager</String>
+            <ConnectedNoteIDs>58, 60</ConnectedNoteIDs>
+        </Note>
+        <Note ID="60" FontSize="12.0" Position="1369.5896,1590.141113" Width="174.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Handled by a failover controller</String>
+            <ConnectedNoteIDs>59</ConnectedNoteIDs>
+        </Note>
+        <Note ID="61" FontSize="28.0" Position="1701.056519,296.273132" Width="225.0">
+            <Appearance></Appearance>
+            <String>Shuffle and Sort</String>
+            <ConnectedNoteIDs>62, 64, 73</ConnectedNoteIDs>
+            <PointsToNoteIDs>64, 73</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,16</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="62" FontSize="12.0" Position="1634.027222,188.869568" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Shuffle is a process by which the system performs the sort and transfers the map outputs to the reducers as inputs</String>
+            <ConnectedNoteIDs>61, 63</ConnectedNoteIDs>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="1566.371826,52.943569" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The shuffle is an area of the codebase where refinements and improvements are continually being made, so the following description necessarily conceals many details</String>
+            <ConnectedNoteIDs>62</ConnectedNoteIDs>
+        </Note>
+        <Note ID="64" FontSize="12.0" Position="1540.29248,311.156097" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Map</String>
+            <ConnectedNoteIDs>61, 65</ConnectedNoteIDs>
+        </Note>
+        <Note ID="65" FontSize="12.0" Position="1308.213989,371.065247" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Each Map task has a circular memory buffer that it writes the output to</String>
+            <ConnectedNoteIDs>64, 67-68</ConnectedNoteIDs>
+            <PointsToNoteIDs>68</PointsToNoteIDs>
+        </Note>
+        <Note ID="67" FontSize="12.0" Position="1536.831543,379.395966" Width="94.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Buffer is 100MB</String>
+            <ConnectedNoteIDs>65</ConnectedNoteIDs>
+        </Note>
+        <Note ID="68" FontSize="12.0" Position="1283.416626,458.67688" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>When buffer reaches certain threshold size, a background thread will start to spill the contents to disk</String>
+            <ConnectedNoteIDs>65, 69-71</ConnectedNoteIDs>
+            <PointsToNoteIDs>71</PointsToNoteIDs>
+        </Note>
+        <Note ID="69" FontSize="12.0" Position="1543.40271,458.876953" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map output will continue to be written to the buffer while the spill takes place</String>
+            <ConnectedNoteIDs>68</ConnectedNoteIDs>
+        </Note>
+        <Note ID="70" FontSize="12.0" Position="1548.110596,526.99054" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Before it writes to disk, the thread first divides the data into partitions corresponding to the reducers </String>
+            <ConnectedNoteIDs>68</ConnectedNoteIDs>
+        </Note>
+        <Note ID="71" FontSize="12.0" Position="1281.371948,587.098816" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Before the task is finished, the spill files are merged into a single partitioned and sorted output file</String>
+            <ConnectedNoteIDs>68, 72, 74</ConnectedNoteIDs>
+            <PointsToNoteIDs>74</PointsToNoteIDs>
+        </Note>
+        <Note ID="72" FontSize="12.0" Position="1547.102539,600.10614" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>At least 3 spill files, otherwise it’s not worth the efforts</String>
+            <ConnectedNoteIDs>71</ConnectedNoteIDs>
+        </Note>
+        <Note ID="73" FontSize="12.0" Position="2070.0,307.0" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.561855 0.71062 0.779401</Border>
+                <Fill>0.702319 0.888276 0.974252</Fill>
+            </Appearance>
+            <String>Reduce</String>
+            <ConnectedNoteIDs>61, 75</ConnectedNoteIDs>
+            <PointsToNoteIDs>75</PointsToNoteIDs>
+        </Note>
+        <Note ID="74" FontSize="12.0" Position="1285.910767,679.968262" Width="198.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map output file sits on the local disk</String>
+            <ConnectedNoteIDs>71</ConnectedNoteIDs>
+        </Note>
+        <Note ID="75" FontSize="12.0" Position="2074.820557,375.541168" Width="37.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Copy</String>
+            <ConnectedNoteIDs>73, 76-77, 82</ConnectedNoteIDs>
+            <PointsToNoteIDs>82</PointsToNoteIDs>
+        </Note>
+        <Note ID="76" FontSize="12.0" Position="2234.120605,372.201385" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The reduce task starts copying their outputs as soon as each completes. </String>
+            <ConnectedNoteIDs>75</ConnectedNoteIDs>
+        </Note>
+        <Note ID="77" FontSize="12.0" Position="2234.461914,427.203613" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>If Map outputs are small, they will be copied to reduce task JVM’s memory; 
+Otherwise, they are copied to disk</String>
+            <ConnectedNoteIDs>75, 78</ConnectedNoteIDs>
+            <PointsToNoteIDs>78</PointsToNoteIDs>
+        </Note>
+        <Note ID="78" FontSize="12.0" Position="2349.009521,529.863098" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>When the memory reaches threshold, it will be merged and spilled to disk</String>
+            <ConnectedNoteIDs>77, 80</ConnectedNoteIDs>
+            <PointsToNoteIDs>80</PointsToNoteIDs>
+        </Note>
+        <Note ID="80" FontSize="12.0" Position="2364.31958,620.09845" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>After accumulating certain amount of copies, a background thread merges them into larger, sorted files</String>
+            <ConnectedNoteIDs>78</ConnectedNoteIDs>
+        </Note>
+        <Note ID="82" FontSize="12.0" Position="2083.245117,486.13269" Width="29.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>sort</String>
+            <ConnectedNoteIDs>75, 83-84</ConnectedNoteIDs>
+            <PointsToNoteIDs>84</PointsToNoteIDs>
+        </Note>
+        <Note ID="83" FontSize="12.0" Position="1833.094238,474.213776" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Merge the map outputs, maintaining their sort ordering</String>
+            <ConnectedNoteIDs>82</ConnectedNoteIDs>
+        </Note>
+        <Note ID="84" FontSize="12.0" Position="2074.573242,568.078613" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reduce</String>
+            <ConnectedNoteIDs>82, 85-86, 89</ConnectedNoteIDs>
+            <PointsToNoteIDs>89</PointsToNoteIDs>
+        </Note>
+        <Note ID="85" FontSize="12.0" Position="1814.795166,572.454346" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>This final merge can come from a mixture of in-memory and on-disk segments</String>
+            <ConnectedNoteIDs>84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="86" FontSize="12.0" Position="1822.609619,648.443176" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The reduce function is invoked for each key in the sorted output</String>
+            <ConnectedNoteIDs>84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="89" FontSize="12.0" Position="2012.947144,714.9953" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The output is written directly to the output filesystem, typically HDFS</String>
+            <ConnectedNoteIDs>84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="90" FontSize="28.0" Position="2948.0,272.0" Width="291.0">
+            <Appearance></Appearance>
+            <String>Configuration Tuning</String>
+            <ConnectedNoteIDs>91, 96</ConnectedNoteIDs>
+            <PointsToNoteIDs>96</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,20</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="91" FontSize="12.0" Position="2857.316895,147.967636" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>How to tune shuffle to improve MapReduce performance</String>
+            <ConnectedNoteIDs>90, 93</ConnectedNoteIDs>
+        </Note>
+        <Note ID="93" FontSize="12.0" Position="2598.150635,187.015625" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>Principle: Try to give the shuffle as much memory as possible</String>
+            <ConnectedNoteIDs>91, 95</ConnectedNoteIDs>
+        </Note>
+        <Note ID="95" FontSize="12.0" Position="2504.794678,86.840401" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It’s best to write your map and reduce functions to use as little memory as possible</String>
+            <ConnectedNoteIDs>93</ConnectedNoteIDs>
+        </Note>
+        <Note ID="96" FontSize="12.0" Position="2995.397217,384.794647" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Give JVM as much as memory as possible</String>
+            <ConnectedNoteIDs>90, 97-98, 100</ConnectedNoteIDs>
+            <PointsToNoteIDs>98, 100</PointsToNoteIDs>
+        </Note>
+        <Note ID="97" FontSize="12.0" Position="3283.0,354.0" Width="116.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map and reduce run</String>
+            <ConnectedNoteIDs>96</ConnectedNoteIDs>
+        </Note>
+        <Note ID="98" FontSize="12.0" Position="2894.350342,479.325897" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map</String>
+            <ConnectedNoteIDs>96, 99</ConnectedNoteIDs>
+        </Note>
+        <Note ID="99" FontSize="12.0" Position="2700.0,488.0" Width="151.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Avoid multiple spills to disk</String>
+            <ConnectedNoteIDs>98</ConnectedNoteIDs>
+        </Note>
+        <Note ID="100" FontSize="12.0" Position="3161.214355,489.992188" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reduce</String>
+            <ConnectedNoteIDs>96, 101</ConnectedNoteIDs>
+            <PointsToNoteIDs>101</PointsToNoteIDs>
+        </Note>
+        <Note ID="101" FontSize="12.0" Position="3245.650635,561.901794" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>When the intermediate data can reside entirely in memory</String>
+            <ConnectedNoteIDs>100</ConnectedNoteIDs>
+        </Note>
+        <Note ID="102" FontSize="28.0" Position="2953.088623,985.086975" Width="212.0">
+            <Appearance></Appearance>
+            <String>Task Execution</String>
+            <ConnectedNoteIDs>103, 106, 116</ConnectedNoteIDs>
+            <PointsToNoteIDs>103, 106, 116</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="103" FontSize="12.0" Position="2728.055664,1078.837036" Width="184.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The Task Execution Environment</String>
+            <ConnectedNoteIDs>102, 104-105</ConnectedNoteIDs>
+        </Note>
+        <Note ID="104" FontSize="12.0" Position="2459.638428,1137.275513" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A Map task can discover the name of the file it is processing</String>
+            <ConnectedNoteIDs>103</ConnectedNoteIDs>
+        </Note>
+        <Note ID="105" FontSize="12.0" Position="2487.871582,1003.903015" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A map or reduce task can find out the attempt number of the task</String>
+            <ConnectedNoteIDs>103</ConnectedNoteIDs>
+        </Note>
+        <Note ID="106" FontSize="12.0" Position="2997.855713,1107.939819" Width="127.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Speculative Execution</String>
+            <ConnectedNoteIDs>102, 107-111</ConnectedNoteIDs>
+        </Note>
+        <Note ID="107" FontSize="12.0" Position="3183.478271,1045.694824" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Hadoop tries to detect when a task is running slower than expected and launches another equivalent task as a back up</String>
+            <ConnectedNoteIDs>106</ConnectedNoteIDs>
+        </Note>
+        <Note ID="108" FontSize="12.0" Position="3191.378174,1157.556763" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Only launch when there for the small proportion that are running significantly slower than the average</String>
+            <ConnectedNoteIDs>106</ConnectedNoteIDs>
+        </Note>
+        <Note ID="109" FontSize="12.0" Position="2719.314453,1143.772217" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>If the original task completes before the speculative task, the speculative task is killed. Otherwise, the original is killed</String>
+            <ConnectedNoteIDs>106</ConnectedNoteIDs>
+        </Note>
+        <Note ID="110" FontSize="12.0" Position="2839.268799,1273.935791" Width="108.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It’s an optimization</String>
+            <ConnectedNoteIDs>106</ConnectedNoteIDs>
+        </Note>
+        <Note ID="111" FontSize="12.0" Position="2999.506592,1237.977539" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>But come at the cost of cluster efficiency. </String>
+            <ConnectedNoteIDs>106, 113</ConnectedNoteIDs>
+            <PointsToNoteIDs>113</PointsToNoteIDs>
+        </Note>
+        <Note ID="113" FontSize="12.0" Position="3010.706787,1322.93457" Width="179.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sometimes it’s good to turn it off</String>
+            <ConnectedNoteIDs>111, 114-115</ConnectedNoteIDs>
+        </Note>
+        <Note ID="114" FontSize="12.0" Position="3243.844482,1359.564941" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>For reduce, this can significantly increase network traffic on the cluster</String>
+            <ConnectedNoteIDs>113</ConnectedNoteIDs>
+        </Note>
+        <Note ID="115" FontSize="12.0" Position="2829.992676,1394.584106" Width="141.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>For nonidempotent tasks</String>
+            <ConnectedNoteIDs>113</ConnectedNoteIDs>
+        </Note>
+        <Note ID="116" FontSize="12.0" Position="3293.839111,877.915161" Width="109.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Output Committers</String>
+            <ConnectedNoteIDs>102, 117</ConnectedNoteIDs>
+        </Note>
+        <Note ID="117" FontSize="12.0" Position="3461.300293,941.651794" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It’s a protocol to ensure that jobs and tasks either succeed or fail cleanly </String>
+            <ConnectedNoteIDs>116</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0, 2-7, 10, 13, 16, 27, 29, 32-35, 37, 39-40, 43-44, 46-47, 49, 53, 56, 60-61, 64, 67, 73-75, 82, 84, 90, 97-100, 102-103, 106, 110, 113, 115-116</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="21AB6FFF-7B89-4BAB-A5A5-E8DE00AF0245" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="E5F3DA9B-B6AB-44BC-8CAC-3C85E9005C85" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="F5BDD737-080A-4050-A760-506209BC363A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="87F20154-845C-4127-93EE-1D530ABF46C0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="3CA0C2A1-A0DA-466E-9973-3E14275F3D4B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="0655B546-1064-4BDD-92E0-956EF252CEF1" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="1CC128D2-E9DE-47BF-AD5D-5DD6C3691705" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

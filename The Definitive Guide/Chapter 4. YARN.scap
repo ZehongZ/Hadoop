@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="31AEA1B4-D059-4CF0-9A11-012832CC4210">
+    <Notes>
+        <Note ID="2" FontSize="28.0" Position="154.710938,128.632812" Width="85.0">
+            <Appearance></Appearance>
+            <String>YARN</String>
+            <ConnectedNoteIDs>3-4</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,4</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="38.613281,52.871094" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Hadoop’s cluster resource management system</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="312.324219,60.464844" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Some distributed computing frameworks (MapReduce, Spark, and so on) running as YARN applications on the cluster compute layer (YARN) and the cluster storage layer (HDFS and HBase)</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="28.0" Position="34.752747,340.437286" Width="506.0">
+            <Appearance></Appearance>
+            <String>Anatomy of a YARN Application Run</String>
+            <ConnectedNoteIDs>7-8</ConnectedNoteIDs>
+            <PointsToNoteIDs>7-8</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,33</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="402.901184,267.05838" Width="111.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Resource Manager</String>
+            <ConnectedNoteIDs>6, 9, 11</ConnectedNoteIDs>
+            <PointsToNoteIDs>11</PointsToNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="423.893372,427.218536" Width="88.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Node Manager</String>
+            <ConnectedNoteIDs>6, 10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="527.963684,233.156036" Width="197.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Use of resources across the cluster</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="540.705872,480.83963" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Run on all the nodes in the cluster to launch and monitor containers</String>
+            <ConnectedNoteIDs>8</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="623.838684,265.827911" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Flexible model for making resource requests</String>
+            <ConnectedNoteIDs>7, 12-13</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="573.362976,319.869812" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A request for a set of containers can express the amount of computer resources required for each container (memory and CPU)</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="807.373291,345.149384" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Locality constraints for the containers in that request</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="28.0" Position="90.0,715.0" Width="189.0">
+            <Appearance></Appearance>
+            <String>MapReduce 1</String>
+            <ConnectedNoteIDs>15-16</ConnectedNoteIDs>
+            <PointsToNoteIDs>15-16</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,11</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="231.062286,618.521729" Width="71.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Job Tracker</String>
+            <ConnectedNoteIDs>14, 17, 20-21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="213.0625,844.120117" Width="73.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Task tracker</String>
+            <ConnectedNoteIDs>14, 18-19</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="363.785248,604.148254" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Coordinate all the jobs run in the system by scheduling tasks to run on tasktrackers</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="468.406677,807.79834" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Tasktrackers run tasks and send progress reports to the jobtracker, which keeps a record of the overall progress of each job</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="372.619934,933.407104" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>If a task fails, the job racker can reschedule it on a different task tracker</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="364.609802,665.579407" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Take care of both job scheduling and task progress monitoring</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="328.739655,736.267761" Width="197.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Store job history for completed jobs</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="28.0" Position="720.251038,723.266907" Width="85.0">
+            <Appearance></Appearance>
+            <String>YARN</String>
+            <ConnectedNoteIDs>23-26, 30</ConnectedNoteIDs>
+            <PointsToNoteIDs>30</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,4</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="866.0,647.0" Width="111.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Resource manager</String>
+            <ConnectedNoteIDs>22, 27</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="902.808472,706.649719" Width="107.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Application master</String>
+            <ConnectedNoteIDs>22, 27</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="916.0,759.0" Width="90.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Timeline server</String>
+            <ConnectedNoteIDs>22, 27</ConnectedNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="916.0,833.0" Width="88.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Node manager</String>
+            <ConnectedNoteIDs>22, 28</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="1094.638672,662.693848" Width="65.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Jobtracker</String>
+            <ConnectedNoteIDs>23-25</ConnectedNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="1094.671509,835.163635" Width="70.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Tasktracker</String>
+            <ConnectedNoteIDs>26</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="28.0" Position="617.768555,721.887695" Width="46.0">
+            <Appearance>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>VS</String>
+            <Formatting>
+                <FormatRange Bold="Yes">0,2</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="30" FontSize="28.0" Position="636.108765,955.032532" Width="566.0">
+            <Appearance></Appearance>
+            <String>Address limitations in MapReduce 1</String>
+            <ConnectedNoteIDs>22, 31, 33, 35, 38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="1248.773682,911.228699" Width="63.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Scalability</String>
+            <ConnectedNoteIDs>30, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="1386.341675,905.995117" Width="120.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Run on larger cluster</String>
+            <ConnectedNoteIDs>31</ConnectedNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="1253.704346,999.766479" Width="65.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Availability</String>
+            <ConnectedNoteIDs>30, 34</ConnectedNoteIDs>
+        </Note>
+        <Note ID="34" FontSize="12.0" Position="1389.019653,986.085754" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Jobtracker got split between resource manager and application master; HA for the resource manager, then for YARN application</String>
+            <ConnectedNoteIDs>33</ConnectedNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="1252.482422,1077.255127" Width="61.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Utilization</String>
+            <ConnectedNoteIDs>30, 36-37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="1370.817627,1070.778076" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Manage a pool of resources, rather than a fixed number of designed slots</String>
+            <ConnectedNoteIDs>35</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="1380.256592,1139.244507" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Resources are fine grained, so an application can make a request for what it needs, rather than for an individual slot</String>
+            <ConnectedNoteIDs>35</ConnectedNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="1254.127075,1235.051514" Width="76.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Multitenancy</String>
+            <ConnectedNoteIDs>30, 39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="1384.162109,1231.930054" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Open up Hadoop to other types of distributed application</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="28.0" Position="1043.565063,103.496201" Width="228.0">
+            <Appearance></Appearance>
+            <String>YARN Scheduler</String>
+            <ConnectedNoteIDs>42-43</ConnectedNoteIDs>
+            <PointsToNoteIDs>43</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="1320.6698,111.419556" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allocate resources to applications according to some defined policy</String>
+            <ConnectedNoteIDs>40</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="28.0" Position="1028.946533,203.441086" Width="240.0">
+            <Appearance></Appearance>
+            <String>Scheduler Options</String>
+            <ConnectedNoteIDs>40, 45-47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="1434.54541,218.696579" Width="36.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>FIFO</String>
+            <ConnectedNoteIDs>43, 48</ConnectedNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="1327.559448,320.343536" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Capacity</String>
+            <ConnectedNoteIDs>43, 50-52</ConnectedNoteIDs>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="1094.376099,344.958191" Width="93.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Fair Schedulers</String>
+            <ConnectedNoteIDs>43, 53-54</ConnectedNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="1580.810425,215.998947" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Place application in queue and runs them in the order of submission</String>
+            <ConnectedNoteIDs>45</ConnectedNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="1438.047729,278.749359" Width="174.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>Not suitable for shared clusters</String>
+            <ConnectedNoteIDs>46</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="1436.018188,326.700073" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allow long-running jobs to complete in a timely manner, while still allowing users who are running concurrent smaller ad hoc queries to get results back in a reasonable time</String>
+            <ConnectedNoteIDs>46, 55</ConnectedNoteIDs>
+        </Note>
+        <Note ID="52" FontSize="12.0" Position="1373.109375,511.52713" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A separate dedicated queue allows the small job to start as soon as it is submitted</String>
+            <ConnectedNoteIDs>46</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="946.086548,410.936432" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allow long-running jobs to complete in a timely manner, while still allowing users who are running concurrent smaller ad hoc queries to get results back in a reasonable time</String>
+            <ConnectedNoteIDs>47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="54" FontSize="12.0" Position="1176.04895,420.88681" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Dynamically balance resources between all running jobs</String>
+            <ConnectedNoteIDs>47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="55" FontSize="12.0" Position="1593.88501,457.382599" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Within a queue, applications are scheduled using FIFO scheduling</String>
+            <ConnectedNoteIDs>51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="56" FontSize="28.0" Position="1891.528198,81.268028" Width="460.0">
+            <Appearance></Appearance>
+            <String>Capacity Scheduler Configuration</String>
+            <ConnectedNoteIDs>57-60</ConnectedNoteIDs>
+            <PointsToNoteIDs>60</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,32</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="57" FontSize="12.0" Position="2467.665283,31.279936" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allow sharing of a Hadoop cluster along organizational lines</String>
+            <ConnectedNoteIDs>56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="2466.887939,91.689835" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Each organization is set up with a dedicated queue that is configured to use a given fraction of the cluster capacity</String>
+            <ConnectedNoteIDs>56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="59" FontSize="12.0" Position="2472.177979,177.931366" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Within a queue, applications are scheduled using FIFO scheduling</String>
+            <ConnectedNoteIDs>56</ConnectedNoteIDs>
+        </Note>
+        <Note ID="60" FontSize="28.0" Position="1993.518066,185.485245" Width="222.0">
+            <Appearance></Appearance>
+            <String>Queue elasticity</String>
+            <ConnectedNoteIDs>56, 61</ConnectedNoteIDs>
+        </Note>
+        <Note ID="61" FontSize="12.0" Position="2251.956543,225.78154" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allocate spare resources to job in the queue even if that causes the queue’s capacity to be exceeded</String>
+            <ConnectedNoteIDs>60</ConnectedNoteIDs>
+        </Note>
+        <Note ID="62" FontSize="28.0" Position="1906.432007,411.838654" Width="394.0">
+            <Appearance></Appearance>
+            <String>Fair Scheduler Configuration</String>
+            <ConnectedNoteIDs>63-64</ConnectedNoteIDs>
+            <PointsToNoteIDs>64</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,28</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="2407.609131,412.410767" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allocate resources so that all running applications get the same share of resources</String>
+            <ConnectedNoteIDs>62</ConnectedNoteIDs>
+        </Note>
+        <Note ID="64" FontSize="12.0" Position="2055.004639,503.56424" Width="70.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Preemption</String>
+            <ConnectedNoteIDs>62, 65-66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="65" FontSize="12.0" Position="2284.591309,491.973724" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allow the scheduler to kill containers for queues that are running with more than their fair share of resources so that the resources can be allocated to a queue that is under its fair share</String>
+            <ConnectedNoteIDs>64</ConnectedNoteIDs>
+        </Note>
+        <Note ID="66" FontSize="12.0" Position="2284.863281,606.8172" Width="181.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>0.985948 0.0 0.026951</TextColor>
+            </Appearance>
+            <String>Reduce overall cluster efficiency</String>
+            <ConnectedNoteIDs>64</ConnectedNoteIDs>
+        </Note>
+        <Note ID="67" FontSize="28.0" Position="1901.0,728.0" Width="242.0">
+            <Appearance></Appearance>
+            <String>Delay Scheduling</String>
+            <ConnectedNoteIDs>68-69</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,16</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="68" FontSize="12.0" Position="2249.100342,752.496399" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Waiting a short time can dramatically increase the chances of being allocated a container on the requested node and therefore increase the efficiency of the cluster</String>
+            <ConnectedNoteIDs>67</ConnectedNoteIDs>
+        </Note>
+        <Note ID="69" FontSize="12.0" Position="2226.570068,845.727112" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The scheduler doesn’t simply use the first scheduling opportunities it receives, but wait for up to a given maximum number of scheduling opportunities to occur before loosening the locality constraint and taking the next scheduling oppotunity</String>
+            <ConnectedNoteIDs>67</ConnectedNoteIDs>
+        </Note>
+        <Note ID="70" FontSize="28.0" Position="1784.204468,1111.746216" Width="396.0">
+            <Appearance></Appearance>
+            <String>Dominant Resource Fairness</String>
+            <ConnectedNoteIDs>71-72</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,26</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="71" FontSize="12.0" Position="2254.979492,1188.516968" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Application requires lots of CPU but little memory VS. application requires little of CPU but lots of memory</String>
+            <ConnectedNoteIDs>70</ConnectedNoteIDs>
+        </Note>
+        <Note ID="72" FontSize="12.0" Position="1941.499756,1276.315918" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Schedulers in YARN look at each user’s dominant resource and use it as a measure of the cluster usage</String>
+            <ConnectedNoteIDs>70</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>2, 7-9, 14-16, 21-29, 31-33, 35, 38, 40, 45-47, 50, 56, 62, 64, 66-67, 70</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="0A1A6F6A-830D-4EE7-B6A0-C72913318DBB" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="D5CE28EB-68DE-47E0-ADD6-BC20E16A28E2" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="3B863637-8EB6-43F6-BCFD-6F05BF32D807" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="D58DE68C-F38C-4C19-B27E-077E2ED59A26" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="6EE2EFD9-065F-4596-9D4A-F133B2CD9266" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="30ABAFE4-4DFE-4723-ACB9-8F69BDD8980E" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="A37F7AC9-E877-455E-9B37-098DEA8E4910" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="01FC5B87-332F-43F2-92E6-BE7CD5202C0E">
+    <Notes>
+        <Note ID="3" FontSize="28.0" Position="47.003906,70.628906" Width="304.0">
+            <Appearance></Appearance>
+            <String>Data Integrity in HDFS</String>
+            <ConnectedNoteIDs>4-6</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,22</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="438.210938,71.199219" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The usual way of detecting corrupted data is by computing a checksum</String>
+            <ConnectedNoteIDs>3</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="439.511719,145.335938" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Datanodes are responsible for verifying the data they receive before storing the data and its checksum</String>
+            <ConnectedNoteIDs>3</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="431.546875,244.996094" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>When clients read data from datanodes, they verify checksums as well comparing them with the ones stored at the datanodes</String>
+            <ConnectedNoteIDs>3</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="28.0" Position="53.667969,404.335938" Width="245.0">
+            <Appearance></Appearance>
+            <String>Local File System</String>
+            <ConnectedNoteIDs>9</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,17</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="403.167969,458.105469" Width="192.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Perform client-side checksumming</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="28.0" Position="53.207031,575.40625" Width="324.0">
+            <Appearance></Appearance>
+            <String>Check Sum File System</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,21</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="433.117188,593.535156" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Local File System uses Check Sum File System to do its work</String>
+            <ConnectedNoteIDs>10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="28.0" Position="59.194988,746.661133" Width="187.0">
+            <Appearance></Appearance>
+            <String>Compression</String>
+            <ConnectedNoteIDs>13, 16</ConnectedNoteIDs>
+            <PointsToNoteIDs>13, 16</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,11</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="354.535034,798.298279" Width="76.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Two benefits</String>
+            <ConnectedNoteIDs>12, 14-15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="506.426697,761.140259" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reduce the space needed to store files</String>
+            <ConnectedNoteIDs>13</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="506.342041,840.398865" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Speed up data transfer across the network or to or from disk</String>
+            <ConnectedNoteIDs>13</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="74.99073,837.672363" Width="120.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Space/Time trade-off</String>
+            <ConnectedNoteIDs>12, 17-18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="24.34066,894.347168" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Faster compression and decompression speeds usually come at the expense of smaller space savings</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="222.810959,929.282959" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>-1 optimizes for speed; -9 optimizes for space</String>
+            <ConnectedNoteIDs>16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="28.0" Position="211.048706,1163.199097" Width="110.0">
+            <Appearance></Appearance>
+            <String>Codecs</String>
+            <ConnectedNoteIDs>20-21, 24, 26</ConnectedNoteIDs>
+            <PointsToNoteIDs>21, 24, 26</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,6</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="41.183159,1065.236084" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A codec is the implementation of a compression-decompression algorithm</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="393.72052,1107.844238" Width="80.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Two methods</String>
+            <ConnectedNoteIDs>19, 22-23</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="531.348145,999.46875" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>createOutputStream: to create a CompressionOutputStream to which you write your uncompressed data to have it written in compressed form to the underlying stream</String>
+            <ConnectedNoteIDs>21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="503.190582,1143.894531" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>createInputStream: to obtain a CompressionInputStrem, which allows you to read uncompressed data from the underlying stream</String>
+            <ConnectedNoteIDs>21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="73.572182,1244.365479" Width="88.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Native libraries</String>
+            <ConnectedNoteIDs>19, 25</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="29.719631,1296.077026" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>For performance, reduced decompression times by up to 50% and compression times by around 10%</String>
+            <ConnectedNoteIDs>24</ConnectedNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="338.547974,1242.939209" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>CodesPool</String>
+            <ConnectedNoteIDs>19, 27</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="425.767395,1281.984863" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Allow you to reuse compressors and decompressors if you are doing lots of compression or decompression in your application</String>
+            <ConnectedNoteIDs>26</ConnectedNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="28.0" Position="836.38446,173.435867" Width="405.0">
+            <Appearance></Appearance>
+            <String>Compression and Input Splits</String>
+            <ConnectedNoteIDs>29</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,28</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="1125.0,73.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>It is important that the compression format supports splitting</String>
+            <ConnectedNoteIDs>28</ConnectedNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="28.0" Position="950.34375,522.807312" Width="173.0">
+            <Appearance></Appearance>
+            <String>Serialization</String>
+            <ConnectedNoteIDs>31-33, 38, 41</ConnectedNoteIDs>
+            <PointsToNoteIDs>33, 38, 41</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,13</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="1171.557251,422.755219" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>The process of turning structured objects into a byte stream for transmission over a network or for writing to persistent storage</String>
+            <ConnectedNoteIDs>30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="1185.171875,522.010437" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Deserizlization is the reverse process of turning a byte stream back into a series of structured objects</String>
+            <ConnectedNoteIDs>30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="779.348938,389.776031" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Two areas of distributed data processing</String>
+            <ConnectedNoteIDs>30, 35-36</ConnectedNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="717.625,468.515625" Width="159.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Interprocess communication</String>
+            <ConnectedNoteIDs>33</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="770.572937,319.130219" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Persistent storage</String>
+            <ConnectedNoteIDs>33</ConnectedNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="820.0,612.0" Width="40.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>RPCs</String>
+            <ConnectedNoteIDs>30, 39-40</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="714.4375,677.489563" Width="139.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Remote procedure calss</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="895.90625,676.036438" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Interprocess communication between nodes in the system</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="1125.604126,666.338562" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Desirable format</String>
+            <ConnectedNoteIDs>30, 42-45</ConnectedNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="1106.0,736.0" Width="57.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Compact</String>
+            <ConnectedNoteIDs>41</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="1248.0,747.0" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Fast</String>
+            <ConnectedNoteIDs>41</ConnectedNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="1279.729126,700.984375" Width="64.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Extensible</String>
+            <ConnectedNoteIDs>41</ConnectedNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="1266.0,650.0" Width="79.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Interoperable</String>
+            <ConnectedNoteIDs>41</ConnectedNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="28.0" Position="876.0,923.0" Width="134.0">
+            <Appearance></Appearance>
+            <String>Writables</String>
+            <ConnectedNoteIDs>47</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,9</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="1059.125,1013.697937" Width="188.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Hadoop’s own serialization format</String>
+            <ConnectedNoteIDs>46</ConnectedNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="28.0" Position="807.0,1253.0" Width="366.0">
+            <Appearance></Appearance>
+            <String>File-Based Data Structures</String>
+            <ConnectedNoteIDs>49, 52</ConnectedNoteIDs>
+            <PointsToNoteIDs>49, 52</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,26</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="49" FontSize="12.0" Position="917.0,1170.0" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sequence File</String>
+            <ConnectedNoteIDs>48, 50-51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="763.8125,1100.817749" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Provide. a persistent data structure for binary key-value pairs</String>
+            <ConnectedNoteIDs>49</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="994.385437,1108.53125" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Work well as containers for smaller files</String>
+            <ConnectedNoteIDs>49</ConnectedNoteIDs>
+        </Note>
+        <Note ID="52" FontSize="12.0" Position="827.0,1376.0" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Map File</String>
+            <ConnectedNoteIDs>48, 53</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="787.302063,1448.828125" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>A MapFile is a sorted SequenceFile with an index to permit lookups by key</String>
+            <ConnectedNoteIDs>52</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>3, 7, 9-10, 12-13, 16, 19, 21, 24, 26, 28, 30, 35-36, 38-39, 41-49, 52</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="25E2E0D4-DAB2-4287-8486-817F053E5317" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="8BFE6089-CFA1-449A-9622-C63FEABFC4FE" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="AF6BB3CE-1C02-4B2F-88FF-9E0286F61A99" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="8A3B4005-B724-4780-886F-288738D63749" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="AB01DCBE-1053-4025-96DF-3E8F56F9CBDF" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="0A9AF2C7-70EA-49A6-9DB9-4B5DC685B43D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="57CF91BF-EB63-405E-8753-617ED87F6975" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

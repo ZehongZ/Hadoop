@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="1F9FE075-22F5-47B2-B2B5-08E62F969985">
+    <Notes>
+        <Note ID="4" FontSize="28.0" Position="86.832031,141.421875" Width="231.0">
+            <Appearance></Appearance>
+            <String>Map and Reduce</String>
+            <ConnectedNoteIDs>5-6, 10-11, 14, 18</ConnectedNoteIDs>
+            <PointsToNoteIDs>5-6, 18</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,14</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="359.265625,103.820312" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Map</String>
+            <ConnectedNoteIDs>4, 7-9</ConnectedNoteIDs>
+            <PointsToNoteIDs>9</PointsToNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="401.179688,395.796875" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Reduce</String>
+            <ConnectedNoteIDs>4, 15, 17</ConnectedNoteIDs>
+            <PointsToNoteIDs>17</PointsToNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="652.953125,81.421875" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Data preparation phase, setting up the data in such a way that the reduce function can do its work on it</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="640.925781,30.707031" Width="139.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Also to drop bad records</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="348.421875,161.679688" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>The output from the map function is processed by the MapReduce framework before being sent to the reduce function. This processing sorts and groups the key-value pairs by key</String>
+            <ConnectedNoteIDs>5, 15</ConnectedNoteIDs>
+            <PointsToNoteIDs>15</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="86.273438,5.074219" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>It consists of the input data, the MapReduce program and configuration information</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="333.128906,6.964844" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>The tasks are scheduled using YARN and run on nodes in the cluster</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="20.0,259.765625" Width="177.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+            </Appearance>
+            <String>Size of an HDFS block: 128 MB</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="362.394531,299.234375" Width="189.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Map writes output to the local disk</String>
+            <ConnectedNoteIDs>6, 9, 16</ConnectedNoteIDs>
+            <PointsToNoteIDs>6</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="671.855469,267.992188" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+            </Appearance>
+            <String>Map output is intermediate output: It’s processed by reduce tasks to produce the final output, and one the job is complete, the map output can be thrown away</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="342.285156,475.597656" Width="194.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Output is normally stored in HDFS </String>
+            <ConnectedNoteIDs>6</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="313.113281,578.386719" Width="61.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Combiner</String>
+            <ConnectedNoteIDs>4, 19-22</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="458.023438,562.679688" Width="131.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Run on the Map output</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="458.109375,620.550781" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Output forms the input to the reduce function</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="461.613281,678.386719" Width="108.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>It’s an optimization</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="399.222656,737.527344" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Help cut down the amount of data shuffled between the mappers and the reducers</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="28.0" Position="22.503906,928.339844" Width="257.0">
+            <Appearance>
+                <TextColor>1.0 1.0 1.0</TextColor>
+            </Appearance>
+            <String>Hadoop Streaming</String>
+            <ConnectedNoteIDs>24-25, 28</ConnectedNoteIDs>
+            <PointsToNoteIDs>28</PointsToNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,16</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="407.164062,925.722656" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Allow to write your map and reduce functions in languages </String>
+            <ConnectedNoteIDs>23</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="411.414062,981.101562" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Uses Unix standard streams as the interface between Hadoop and your program</String>
+            <ConnectedNoteIDs>23</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="403.160156,1078.269531" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Map input data is passed over standard input to your map function, which processes it line by line and writes lines to standard output</String>
+            <ConnectedNoteIDs>28</ConnectedNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="143.636719,1108.066406" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Map</String>
+            <ConnectedNoteIDs>23, 27, 29</ConnectedNoteIDs>
+            <PointsToNoteIDs>29</PointsToNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="150.644531,1173.398438" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>A Map output key-value pair is written as a single tab-delimited line.</String>
+            <ConnectedNoteIDs>28, 30</ConnectedNoteIDs>
+            <PointsToNoteIDs>30</PointsToNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="342.410156,1286.371094" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Input to the reduce function is in the format of a tab-separated key-value pair</String>
+            <ConnectedNoteIDs>29, 31</ConnectedNoteIDs>
+            <PointsToNoteIDs>31</PointsToNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="146.078125,1359.253906" Width="50.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Reduce</String>
+            <ConnectedNoteIDs>30, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="341.707031,1363.136719" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Read lines from standard input, which framework guarantees are sorted by key, and writes its results to standard output</String>
+            <ConnectedNoteIDs>31</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>4-6, 8, 14-15, 17-19, 21, 23, 28, 31</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="E5858956-9D73-490A-8858-A6EC455EFFDB" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="2AB8348C-EEF4-49D4-8371-63EEC05FD555" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="57438BD0-D434-4CEE-B0D1-56FCA4EDBE4F" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="3CD612DC-B4A7-42D9-934A-CD48864EA18F" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="092B3ED8-C597-456A-8991-81E0FB59372B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="D96E13F9-9B9D-4F1B-858D-9F97C958F115" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="19C76F6C-F88A-46ED-87DE-DDC0E221FD20" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.0 0.0 0.0</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
